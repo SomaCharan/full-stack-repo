@@ -1,18 +1,17 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-const LoginHandler = require("./handlers/auth");
-const UserHandler = require("./handlers/user");
-const PaymentHandler = require("./handlers/payment");
-const VideoHandler = require("./handlers/video");
-const BankHandler = require("./handlers/bank");
-const AdminHandler = require("./handlers/admin");
-const WithdrawalHandler = require("./handlers/withdrawal");
+const LoginHandler = require("./src/handlers/auth");
+const UserHandler = require("./src/handlers/user");
+const PaymentHandler = require("./src/handlers/payment");
+const VideoHandler = require("./src/handlers/video");
+const BankHandler = require("./src/handlers/bank");
+const AdminHandler = require("./src/handlers/admin");
+const WithdrawalHandler = require("./src/handlers/withdrawal");
 const path = require("path");
 
 const app = express();
 
-const appName = "Success Thinks API";
+const appName = "Success Thinks";
 const port = process.env.PORT || 4000;
 
 const isDevelopment = port.toString().includes("4000");
@@ -29,8 +28,8 @@ db.once("open", function () {
   console.log("MongoDB connected successfully");
 });
 
-app.use(express.static("public"));
-app.use(bodyParser.json(), bodyParser.urlencoded({ extended: true }));
+// app.use(express.static("public"));
+app.use(express.json({ extended: false }));
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -55,9 +54,9 @@ app.use("/bank", BankHandler);
 app.use("/withdrawal-request", WithdrawalHandler);
 
 //error handler
-app.use((err, req, res, next) => {
-  res.status(err.status || 500).send(err.message || err);
-});
+// app.use((err, req, res, next) => {
+//   res.status(err.status || 500).send(err.message || err);
+// });
 
 // app.get("/", function (req, res, next) {
 //   res.send("isDevelopment = " + isDevelopment);
