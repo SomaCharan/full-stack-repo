@@ -5,7 +5,7 @@ import ApiRoute from '../../utils/apiRoutes';
  * get all withdrawal Requests
  */
 const getWithDrawalRequests = () => async () => {
-  const res = await axios.get(ApiRoute.baseURL + ApiRoute.getWithDrawalRequests);
+  const res = await axios.get(ApiRoute.getWithDrawalRequests);
   return res;
 };
 

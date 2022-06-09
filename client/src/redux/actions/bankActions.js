@@ -6,7 +6,7 @@ import ApiRoute from '../../utils/apiRoutes';
  * @param {Object} data
  */
 export const addBankInformation = (data) => async () => {
-  const res = await axios.post(ApiRoute.baseURL + ApiRoute.addBankInformation, data);
+  const res = await axios.post(ApiRoute.addBankInformation, data);
   return res;
 };
 
@@ -14,6 +14,6 @@ export const addBankInformation = (data) => async () => {
  * get bank information
  */
 export const getBankInformation = () => async () => {
-  const res = await axios.get(ApiRoute.baseURL + ApiRoute.getBankInformation);
+  const res = await axios.get(ApiRoute.getBankInformation);
   return res;
 };

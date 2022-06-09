@@ -20,7 +20,7 @@ export const loadUser = () => async (dispatch) => {
   }
 
   try {
-    const res = await axios.get(ApiRoute.baseURL + ApiRoute.auth);
+    const res = await axios.get(ApiRoute.auth);
     dispatch({
       type: USER_LOADED,
       payload: res.data,
@@ -38,7 +38,7 @@ export const loadUser = () => async (dispatch) => {
  */
 export const login = (data) => async (dispatch) => {
   try {
-    const res = await axios.post(ApiRoute.baseURL + ApiRoute.auth, data);
+    const res = await axios.post(ApiRoute.auth, data);
 
     dispatch({
       type: LOGIN_SUCCESS,

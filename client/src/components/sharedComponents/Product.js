@@ -56,7 +56,7 @@ export default function Product({
         };
 
         try {
-          const res = await axios.post(ApiRoute.baseURL + ApiRoute.createUser, {
+          const res = await axios.post(ApiRoute.createUser, {
             paymentData,
             ...userDetails,
           });
@@ -101,7 +101,7 @@ export default function Product({
 
     try {
       const res = await axios.post(
-        ApiRoute.baseURL + ApiRoute.createOrder,
+        ApiRoute.createOrder,
         data
       );
 

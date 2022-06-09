@@ -6,7 +6,7 @@ import ApiRoute from '../../utils/apiRoutes';
  * @param {Object} data
  */
 export const addVideo = (data) => async () => {
-  const res = await axios.post(ApiRoute.baseURL + ApiRoute.addVideo, data);
+  const res = await axios.post(ApiRoute.addVideo, data);
 
   return res;
 };
@@ -15,7 +15,7 @@ export const addVideo = (data) => async () => {
  * get a videos
  */
 export const getVideos = () => async () => {
-  const res = await axios.get(ApiRoute.baseURL + ApiRoute.getVideos);
+  const res = await axios.get(ApiRoute.getVideos);
 
   return res;
 };

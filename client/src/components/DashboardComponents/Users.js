@@ -32,7 +32,6 @@ export default function Users() {
     if (window.confirm(text) === true) {
       try {
         const res = await axios.delete(
-          ApiRoute.baseURL +
           ApiRoute.deleteUser.replace('{uuid}', rowData.userId)
         );
         if (res.status === 200) {
@@ -113,7 +112,7 @@ export default function Users() {
   async function getUsers() {
     setGlobalLoader(true);
     try {
-      const res = await axios.get(ApiRoute.baseURL + ApiRoute.getUsers);
+      const res = await axios.get(ApiRoute.getUsers);
 
       if (res.status === 200) {
         const data = res.data.map((d) => ({

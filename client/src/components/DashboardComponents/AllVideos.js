@@ -31,7 +31,7 @@ export default function AllVideos() {
     if (window.confirm(text) === true) {
       try {
         const res = await axios.delete(
-          ApiRoute.baseURL + ApiRoute.deleteVideo + rowData.id
+          ApiRoute.deleteVideo + rowData.id
         );
 
         if (res.status === 200) {
@@ -86,7 +86,7 @@ export default function AllVideos() {
   async function getVideos() {
     setGlobalLoader(true);
     try {
-      const res = await axios.get(ApiRoute.baseURL + ApiRoute.getVideos);
+      const res = await axios.get(ApiRoute.getVideos);
 
       if (res.status === 200) {
         const data = res.data.map((d) => ({

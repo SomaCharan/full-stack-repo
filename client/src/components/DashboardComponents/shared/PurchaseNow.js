@@ -53,7 +53,6 @@ export default function PurchaseNow({ amount, productName, productId }) {
 
         try {
           const res = await axios.post(
-            ApiRoute.baseURL +
               ApiRoute.confirmOrder.replace(
                 '{userreference}',
                 User.userreference
@@ -109,7 +108,7 @@ export default function PurchaseNow({ amount, productName, productId }) {
 
     try {
       const res = await axios.post(
-        ApiRoute.baseURL + ApiRoute.createOrder,
+        ApiRoute.createOrder,
         data
       );
 

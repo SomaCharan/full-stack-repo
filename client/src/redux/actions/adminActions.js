@@ -7,7 +7,7 @@ import ApiRoute from '../../utils/apiRoutes';
  */
 
 export const getUsersWithWithdrawalRequests = () => async () => {
-    const res = await axios.get(`${ApiRoute.baseURL}${ApiRoute.getUsers}?withdrawalRequest=true`);
+    const res = await axios.get(`${ApiRoute.getUsers}?withdrawalRequest=true`);
 
     return res;
 };
@@ -18,7 +18,7 @@ export const getUsersWithWithdrawalRequests = () => async () => {
  * @param {Object} data
  */
 export const registerWithdrawalPayment = (data) => async () => {
-    const res = await axios.post(ApiRoute.baseURL + ApiRoute.registerWithdrawalPayment, data);
+    const res = await axios.post(ApiRoute.registerWithdrawalPayment, data);
 
     return res;
 };

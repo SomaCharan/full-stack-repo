@@ -12,7 +12,7 @@ import setGlobalLoader from './dashboardLoaderActions';
 //  */
 // export const signUpUser = (data) => async (dispatch) => {
 //   try {
-//     const res = await axios.post(ApiRoute.baseURL + ApiRoute.createUser, data);
+//     const res = await axios.post(ApiRoute.createUser, data);
 
 //     if (res.status === 200) {
 //       toast.success('user registered successfully.');
@@ -43,7 +43,7 @@ import setGlobalLoader from './dashboardLoaderActions';
  */
 export const addUser = (data) => async () => {
   try {
-    const res = await axios.post(ApiRoute.baseURL + ApiRoute.addUser, data);
+    const res = await axios.post(ApiRoute.addUser, data);
 
     if (res.status === 201) {
       toast.success('user registered successfully.');
@@ -68,7 +68,7 @@ export const addUser = (data) => async () => {
 export const editUser = (userId, data) => async () => {
   try {
     const res = await axios.patch(
-      ApiRoute.baseURL + ApiRoute.editUser.replace('{uuid}', userId),
+      ApiRoute.editUser.replace('{uuid}', userId),
       data
     );
 
@@ -90,7 +90,7 @@ export const editUser = (userId, data) => async () => {
 export const editUserSelf = (data) => async () => {
   try {
     const res = await axios.patch(
-      ApiRoute.baseURL + ApiRoute.editUserSelf,
+      ApiRoute.editUserSelf,
       data
     );
 
@@ -114,7 +114,7 @@ export const editUserImage =
   (userId, data, headers, setOpenModal) => async (dispatch) => {
     try {
       const res = await axios.post(
-        ApiRoute.baseURL + ApiRoute.editUserImage.replace('{uuid}', userId),
+        ApiRoute.editUserImage.replace('{uuid}', userId),
         data,
         headers
       );
@@ -138,7 +138,7 @@ export const editUserImage =
  * get income of current user
  */
 export const getIncome = () => async () => {
-  const res = await axios.get(ApiRoute.baseURL + ApiRoute.getIncome);
+  const res = await axios.get(ApiRoute.getIncome);
 
   return res;
 };
@@ -150,7 +150,7 @@ export const getIncome = () => async () => {
 export const getAllDetailsOfUser = (userId) => async () => {
 
   const res = await axios.get(
-    ApiRoute.baseURL + ApiRoute.getAllDetailsOfUser.replace('{uuid}', userId),
+    ApiRoute.getAllDetailsOfUser.replace('{uuid}', userId),
   );
 
   return res;
