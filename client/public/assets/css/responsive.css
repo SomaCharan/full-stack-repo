@@ -1,0 +1,462 @@
+/*--------------------------------------------------
+    ## All responsive style
+---------------------------------------------------*/
+@media all and (min-width: 1600px) {
+	.about-inner {
+		padding-left: 70px;
+	}
+	.navbar-area .nav-container {
+	    padding: 50px 20px;
+	}
+	.navbar-area.navbar-area-fixed .nav-container {
+	    padding: 25px 20px;
+	}
+	.banner-inner {
+	    padding-top: 170px;
+	}
+	.page-title-area {
+		padding: 320px 0 163px;
+	}
+	.speaker-details-area {
+		margin-top: 172px;
+	}
+	.main-blog-area {
+		margin-top: 172px;
+	}
+	.banner-area .banner-thumb {
+	    right: -90px;
+	}
+	.banner-area .banner-thumb img {
+	    width: 780px;
+	}
+}
+@media all and (max-width: 1599px) {
+	.btn {
+	    height: 54px;
+	    line-height: 54px;
+	    padding: 0 30px;
+	}
+	.nav-right-part .btn-red {
+	    height: 48px;
+	    line-height: 48px;
+	}
+	.banner-inner h2 {
+	    font-size: 55px;
+	}
+	.banner-inner p {
+	    font-size: 18px;
+	}
+	.banner-area.style-two .banner-inner h2 {
+	    font-size: 75px;
+	}
+	.date-time-inner ul li {
+	    height: 170px;
+	    width: 170px;
+	}
+	.date-time-inner ul li .number {
+	    font-size: 50px;
+	}
+	.date-time-inner ul li .text {
+	    font-size: 24px;
+	}
+
+	.single-blog-inner .details {
+	    padding: 25px 20px 25px 20px;
+	}
+	.single-schedules-inner-two .schedules-date {
+	    height: 110px;
+	    width: 110px;
+	    padding-top: 25px;
+	}
+	.single-schedules-inner-two .schedules-date .number {
+	    font-size: 34px;
+	}
+	.single-schedules-inner-two .schedules-date .text {
+	    font-size: 18px;
+	}
+	.single-schedules-inner-two .media {
+		padding-left: 130px;
+	}
+	.single-schedules-inner-two .media .media-left {
+		height: 110px;
+		width: 110px;
+	}
+	.single-schedules-inner-two .media-body p {
+		font-size: 14px;
+	}
+	.single-schedules-inner-two .schedules-location p {
+		font-size: 14px;
+	}
+
+}
+
+@media all and (max-width: 1199px) {
+	.owl-nav button {
+		height: 50px;
+		width: 50px;
+	}
+	.speaker-slider .owl-nav .owl-prev {
+	    right: -81px;
+	}
+	.speaker-slider .owl-nav .owl-next {
+	    right: -150px;
+	}
+	.banner-inner h2 {
+	    font-size: 46px;
+	}
+	.banner-inner p {
+	    font-size: 16px;
+	}
+	.single-speaker-inner .social,
+	.single-speaker-inner .details {
+	    padding: 15px;
+	}
+	.single-speaker-inner .details h4 {
+		font-size: 24px;
+	}
+	.evt-tab-inner ul {
+		display: inline-flex;
+	}
+	.evt-tab-inner ul li {
+		display: inline-block
+	}
+	.evt-tab-inner ul li a {
+	    height: 60px;
+	    line-height: 60px;
+	    font-size: 16px;
+	    padding: 0 15px;
+	    width: auto;
+	}
+	.evt-tab-inner ul li a::after {
+	    height: 20px;
+	    width: 20px;
+	    margin-left: -10px;
+	    bottom: -10px;
+	}
+	.section-title.style-white h2 {
+		font-size: 35px;
+	}
+	.single-ticket-price-inner {
+	    padding: 50px 20px;
+	}
+	.single-ticket-price-inner h2 {
+		font-size: 30px;
+	}
+	.single-ticket-price-inner .list ul li {
+		font-size: 15px;
+	}
+	.single-ticket-price-inner .list ul li i {
+	    margin-right: 3px;
+	}
+	.single-ticket-price-inner .btn {
+	    margin-top: 60px;
+	}
+	.sponsor-slider:hover .owl-prev {
+	    left: -10px;
+	}
+	.sponsor-slider:hover .owl-next {
+	    right: -10px;
+	}
+	.main-map-location iframe {
+	    height: 350px;
+	}
+	.footer-area .widget-title {
+	    font-size: 24px;
+	}
+	.footer-area .widget p,
+	.footer-area .widget_nav_menu ul li a {
+		font-size: 15px;
+	}
+	.about-inner {
+		padding: 30px;
+	}
+	.about-inner h2 br {
+		display: none;
+	}
+	.single-event-schedule-3 {
+	    padding: 30px;
+	}
+	.single-event-schedule-3 .media-left {
+		margin-right: 15px;
+	}
+	.single-event-schedule-3 .media-body h4 {
+		font-size: 24px;
+	}
+
+}
+
+@media all and (max-width: 991px) {
+	.speaker-slider .owl-nav {
+		display: none;
+	}
+	.banner-inner h2 {
+	    font-size: 35px;
+	}
+	.banner-area .banner-thumb {
+	    bottom: 55px;
+	}
+	.navbar-area .nav-container {
+	    padding: 8px;
+	} 
+	.navbar-area .nav-container .logo a img {
+		width: 140px;
+	}
+	.nav-right-part .btn-red {
+	    height: 40px;
+	    line-height: 41px;
+	}
+	.navbar-area .nav-container .logo a {
+		position: absolute;
+		left: 0;
+		top: 7px;
+	}
+	.navbar-area-fixed.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li a,
+	.navbar-area-fixed.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children::before,
+	.navbar-area-fixed.navbar-area .nav-container .navbar-collapse .navbar-nav li a {
+		color: #fff;
+	}
+	.navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu li {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.navbar-area .nav-container .navbar-collapse {
+	    padding-right: 0;
+	}
+	.navbar-area.style-two .navbar-collapse {
+    	padding: 0 18px !important;
+    	background: #00ffff;
+	}
+	.banner-area.style-two .banner-inner h2 {
+	    font-size: 50px;
+	}
+	.date-time-inner ul li {
+	    height: 150px;
+	    width: 150px;
+	}
+	.about-inner {
+		padding: 0;
+		margin-bottom: 50px;
+	}
+	.about-area {
+		margin: 100px 30px 0 30px;
+	}
+	.post-check .blog-checker {
+	    margin: 20px 0 10px;
+	}
+	.post-check .blog-checker a i.la-angle-right {
+	    margin-left: 0;
+	    margin-right: 20px;
+	}
+	.comments-area {
+		margin-top: 50px;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.evt-tab-inner ul li a {
+	    font-size: 14px;
+	}
+	.evt-tab-inner ul li a span {
+	    margin-right: 11px;
+	}
+	.banner-area .banner-thumb {
+		position: relative;
+		bottom: 0;
+		right: 0;
+	}
+	.banner-inner {
+	    padding-top: 0;
+	}
+	.banner-area .banner-area-inner {
+	    height: auto;
+	    padding-top: 125px;
+	}
+
+	.sponsor-slider:hover .owl-prev {
+	    left: 10px;
+	}
+	.sponsor-slider:hover .owl-next {
+	    right: 10px;
+	}
+	.banner-area.style-two {
+		height: auto;
+		padding-top: 130px;
+		margin-bottom: 120px;
+	}
+	.date-time-inner ul li {
+	    height: 100px;
+	    width: 100px;
+	}
+	.date-time-inner ul li .number {
+	    font-size: 35px;
+	}
+	.date-time-inner ul li .text {
+	    font-size: 16px;
+	}
+	.date-time-inner ul {
+		text-align: left;
+		margin-left: 0;
+	}
+	.banner-area.style-three {
+		padding-bottom: 70px;
+	}
+	.page-title-area {
+	    padding: 200px 0 113px;
+	}
+	.page-title-area .breadcrumb-inner .page-title {
+		font-size: 40px;
+	}
+	.gallery-thumb {
+		margin: 15px 5px;
+	}
+	.error-area-inner h2 {
+	    font-size: 32px;
+	}
+	.error-copyright p {
+		font-size: 14px;
+	}
+}
+@media all and (max-width: 575px) {
+	.single-speaker-inner .thumb img,
+	.complimentary-area-inner .thumb img,
+	.single-blog-inner .thumb img,
+	.footer-area .widget_instagram .thumb img {
+		width: 100%;
+	}
+	.date-time-inner ul li {
+		margin: 5px 4px;
+	}
+	.single-schedules-inner-two .media {
+		display: block;
+		padding-left: 0;
+	}
+	.single-schedules-inner-two .media .media-left {
+		margin-left: 130px;
+	}
+	.single-schedules-inner-two .media .media-body {
+		margin-top: 20px;
+	}
+
+	.banner-area.style-three .date-time-inner ul {
+		text-align: center;
+	}
+	.banner-area.style-three .date-time-inner ul li {
+		margin: 5px 4px;
+	}
+	.evt-tab-inner ul li a::after {
+		display: none;
+	}
+	.evt-tab-inner ul li a {
+		margin: 5px;
+		padding: 0 12px;
+	}
+	.evt-tab-inner ul {
+	    display: inline-block;
+	}
+	.single-event-schedule-3 {
+		display: block;
+	    padding: 22px;
+	}
+	.single-event-schedule-3 .media-left {
+		margin-bottom: 20px;
+	}
+	.error-area-inner {
+	    height: auto;
+	    padding: 125px 0 50px;
+	}
+	.error-area-inner p {
+		font-size: 15px;
+	}
+	.error-copyright p {
+		margin-bottom: 20px;
+	}
+	.about-area {
+		margin: 100px 15px 0 15px;
+	}
+	.about-inner h2 {
+		font-size: 28px;
+	}
+	.pagination .page-item .page-link {
+	    padding: 12px 15px 11px 15px;
+	}
+	.single-blog-area .comments-area .media {
+		display: block;
+	}
+	.single-blog-area .comments-area .media .media-body {
+	    margin-left: 0;
+	    margin-top: 20px;
+	}
+	.single-blog-area .comments-area .media.nesting {
+	    margin-left: 0;
+	}
+	.single-blog-area .single-blog .details h5 {
+		font-size: 28px;
+	}
+	.login-area-inner h2 {
+	    font-size: 28px;
+	}
+	.login-area-inner p,
+	.single-input-inner span,
+	.single-input-inner input::placeholder,
+	.single-checkbox-inner a,
+	.single-checkbox-inner span {
+		font-size: 15px;
+	}
+	.event-schedule-3 li {
+		padding-left: 0;
+	}
+	.event-schedule-3 .schedules-date {
+		position: relative;
+		margin-bottom: 30px;
+	}
+	.event-schedule-3 li:after {
+		display: none;
+	}
+}
+@media all and (max-width: 360px) {
+	.navbar-area .nav-container .logo a img {
+	    width: 115px;
+	}
+	.evt-tab-inner ul li a {
+	    padding: 0 10px;
+	    margin-bottom: 10px;
+	}
+	.evt-tab-inner ul {
+	    display: inline-block;
+	}
+	.evt-tab-inner ul li a::after {
+		display: none;
+	}
+	.nav-right-part {
+	    margin-right: 30px;
+	}
+	.subscribe-inner-wrap input {
+		height: 60px;
+	    padding: 0 115px 0 18px;
+	}
+	.subscribe-inner-wrap button {
+	    height: 60px;
+	    padding: 0 15px;
+	    font-size: 15px;
+	}
+	.banner-area.style-three .banner-inner h2 {
+	    font-size: 37px;
+	}
+	.banner-area.style-three .banner-inner p br {
+		display: none;
+	}
+	.partner-page-area .thumb img {
+		width: 80px;
+	}
+	.post-check .blog-checker a span {
+		font-size: 15px;
+	} 
+	.post-check .blog-checker a span br {
+		display: none;
+	}
+	.nav-right-part .btn-red {
+		padding: 0 18px;
+	}
+	.speaker-details-inner .details-wrap h5 {
+	    font-size: 28px;
+	}
+}

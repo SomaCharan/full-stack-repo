@@ -1,0 +1,125 @@
+/*--------------------------------------------------
+    ##Footer
+---------------------------------------------------*/
+.footer-area {
+	padding-top: 90px;
+	.widget-title {
+		color: #fff;
+		margin-bottom: 15px;
+	}
+	.widget {
+		margin-bottom: 50px;
+	}
+	.widget_about {
+		.thumb {
+			margin-bottom: 25px;
+			margin-top: 8px;
+		}
+		p {
+			color: rgba(255,255,255,0.95);
+			margin-bottom: 0;
+		}
+		.social-area {
+			margin-top: 24px;
+		}
+	}
+	.widget_nav_menu {
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				list-style: none;
+				margin-bottom: 7px;
+				a {
+					color: rgba(255,255,255,0.95);
+					transition: 0.4s;
+		            &:hover {
+		                color: #022334;
+		            }
+				}
+			}
+		}
+	}
+	.widget_instagram {
+		margin-left: 10px;
+		padding-top: 6px;
+		.thumb {
+			position: relative;
+			margin-bottom: 12px;
+			cursor: pointer;
+			&:after {
+				content: '';
+				position: absolute;
+			    left: 0;
+	    		top: 0;
+				height: 100%;
+				width: 100%;
+				background: rgba(228, 1, 77, 0.5);
+				visibility: hidden;
+				opacity: 0;
+				transition: 0.4s;
+			}
+			a {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -9px;
+				color: #fff;
+				z-index: 9;
+				visibility: hidden;
+				opacity: 0;
+				transition: 0.4s;
+			}
+			&:hover {
+				&:after {
+					visibility: visible;
+					opacity: 1;
+				}
+				a {
+					visibility: visible;
+					opacity: 1;
+					margin-top: -12px;
+				}
+			}
+		}
+	}
+
+	.widget_subscribe {
+		p {
+			color: rgba(255,255,255,0.95);
+			margin-bottom: 32px;
+		}
+		.subscribe-inner {
+			position: relative;
+			input {
+				width: 100%;
+				height: 60px;
+				padding: 0 65px 0 15px;
+				outline: 0 !important;
+				border: 0;
+			}
+			button {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 60px;
+				height: 60px;
+				border: 0;
+				background: #022334;
+				font-size: 18px;
+				font-weight: 600;
+				color: #fff;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.footer-bottom {
+	padding: 25px 15px 25px 15px;
+	border-top: 2px solid #000000;
+	p {
+		margin-bottom: 0;
+		color: rgba(255,255,255,0.95);
+	}
+}
