@@ -9,6 +9,8 @@ import AboutMentor from './components/FrontendComponents/AboutMentor';
 import Products from './components/FrontendComponents/Products';
 import Contact from './components/FrontendComponents/Contact';
 import PrivacyPolicy from './components/FrontendComponents/PrivacyPolicy';
+import TermsAndConditions from './components/FrontendComponents/TermsAndConditions';
+import RefundAndCancellation from './components/FrontendComponents/RefundAndCancellation';
 import LoginSignup from './components/FrontendComponents/LoginSignup';
 import ErrorPage from './components/FrontendComponents/ErrorPage';
 import Dashboard from './components/DashboardComponents/Dashboard';
@@ -21,11 +23,8 @@ import EditUser from './components/DashboardComponents/EditUser';
 import AffiliateDashboard from './components/DashboardComponents/AffiliateDashboard';
 import Payments from './components/DashboardComponents/Payments';
 import WithdrawalRequests from './components/DashboardComponents/WithdrawalRequests';
-// import SuccessKit from './components/DashboardComponents/SuccessKit';
 import AddVideo from './components/DashboardComponents/AddVideo';
 import Videos from './components/DashboardComponents/Videos';
-// import DeepTalk from './components/DashboardComponents/DeepTalk';
-// import Ebook from './components/DashboardComponents/Ebook';
 import { loadUser } from './redux/actions/authActions';
 
 function App() {
@@ -102,6 +101,8 @@ function App() {
           <Route path="/contact" exact element={<Contact />} />
           <Route path="/privacy-policy" exact element={<PrivacyPolicy />} />
           <Route path="/products" exact element={<Products />} />
+          <Route path="/terms-and-conditions" exact element={<TermsAndConditions />} />
+          <Route path="/refunds-and-cancellation" exact element={<RefundAndCancellation />} />
           <Route path="/login" exact element={<LoginSignup />} />
           <Route path="/dashboard" exact element={<Dashboard />} />
           <Route path="/bank-information" exact element={<AddBankInformation />} />
