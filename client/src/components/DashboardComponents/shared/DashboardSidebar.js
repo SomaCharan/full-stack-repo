@@ -164,7 +164,7 @@ export default function DashboardSidebar() {
                   style={{
                     height: '80px',
                     width: '80px',
-                    backgroundColor : 'lightblue',
+                    backgroundColor: 'lightblue',
                   }}
                   alt=""
                 />
@@ -250,12 +250,12 @@ export default function DashboardSidebar() {
                 </Link>
               </li>
             )}
-            {/* <li className="nav-item">
-              <Link to="/bank-information" className="nav-link">
-                <i className="icon-coin-dollar" />
-                <span>Bank Information</span>
+            <li className="nav-item">
+              <Link to="/leaderboard" className="nav-link">
+                <i className="icon-user-tie" />
+                <span>Leaderboard</span>
               </Link>
-            </li> */}
+            </li>
             <li className="nav-item">
               <Link to="/payments" className="nav-link">
                 <i className="icon-coin-dollar" />
@@ -364,11 +364,23 @@ export default function DashboardSidebar() {
                   </Link>
                 </li>
                 <li className="nav-item">
-              <Link to="/withdrawal-requests" className="nav-link">
-                <i className="icon-link" />
-                <span>Withdrawal Requests</span>
-              </Link>
-            </li>
+                  <Link to="/withdrawal-requests" className="nav-link">
+                    <i className="icon-link" />
+                    <span>Withdrawal Requests</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link to="/add-notifications" className="nav-link">
+                    <i className="icon-bubble2" />
+                    <span>Add Notifications</span>
+                  </Link>
+                </li>
+                {/* <li className="nav-item">
+                  <Link to="/users-income-table" className="nav-link">
+                    <i className="icon-wallet" />
+                    <span>User Income Table</span>
+                  </Link>
+                </li> */}
               </>
             )}
             {/* <!-- /main --> */}

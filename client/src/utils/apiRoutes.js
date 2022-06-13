@@ -16,6 +16,9 @@ const API_ROUTES = {
   // withdrawal Requests
   getWithDrawalRequests : '/withdrawal-request',
 
+  // notification requests
+  getNotifications : '/notification',
+
   // Bank Information
   addBankInformation: '/bank',
   getBankInformation: '/bank',
@@ -35,10 +38,12 @@ const API_ROUTES = {
   // admin routes
   addUser: '/admin/user',
   getUsers: '/admin/users',
+  getUsersIncome : '/admin/users/income',
   deleteUser: '/admin/user/{uuid}',
   getAllDetailsOfUser: '/admin/user/{uuid}/all-details',
   editUser: '/admin/user/{uuid}',
-  registerWithdrawalPayment: '/admin/withdrawal-request'
+  registerWithdrawalPayment: '/admin/withdrawal-request',
+  addNotification : '/notification',
 };
 
 export default API_ROUTES;

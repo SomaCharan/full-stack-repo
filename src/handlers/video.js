@@ -33,6 +33,7 @@ const videoPostBodyValidators = [
     .withMessage("product must be a string."),
 ];
 
+// todo add admin validator
 /**
  * create a video
  */
@@ -110,6 +111,7 @@ Router.get("/", auth, async (req, res) => {
   }
 });
 
+// todo add admin validator
 /**
  * Video update api
  */
@@ -144,6 +146,7 @@ Router.patch("/:videoId", auth, async (req, res) => {
   }
 });
 
+// todo add admin validator
 /**
  * video Delete APi
  */

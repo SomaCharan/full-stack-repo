@@ -18,6 +18,9 @@ import IncomeDashboard from './components/DashboardComponents/IncomeDashboard';
 import AddBankInformation from './components/DashboardComponents/AddBankInformation';
 import AddUser from './components/DashboardComponents/AddUser';
 import Users from './components/DashboardComponents/Users';
+// import UsersIncomeTable from './components/DashboardComponents/UsersIncomeTable';
+import AddNotification from './components/DashboardComponents/AddNotification';
+import Notifications from './components/DashboardComponents/Notifications';
 import AllVideos from './components/DashboardComponents/AllVideos';
 import EditUser from './components/DashboardComponents/EditUser';
 import AffiliateDashboard from './components/DashboardComponents/AffiliateDashboard';
@@ -46,6 +49,10 @@ function App() {
       window.location.href.includes('bank-information') ||
       window.location.href.includes('withdrawal-requests') ||
       window.location.href.includes('payments') ||
+      window.location.href.includes('leaderboard') ||
+      window.location.href.includes('notifications') ||
+      window.location.href.includes('add-notifications') ||
+      window.location.href.includes('users-income-table') ||
       window.location.href.includes('deep-talk')
     ) {
       return true;
@@ -114,6 +121,9 @@ function App() {
             exact
             element={<AffiliateDashboard />}
           />
+          {/* <Route path="/users-income-table" exact element={<UsersIncomeTable />} /> */}
+          <Route path="/add-notifications" exact element={<AddNotification />} />
+          <Route path="/notifications" exact element={<Notifications />} />
           <Route path="/add-video" exact element={<AddVideo />} />
           <Route path="/add-user" exact element={<AddUser />} />
           <Route path="/users" exact element={<Users />} />

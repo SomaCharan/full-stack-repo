@@ -7,6 +7,7 @@ const VideoHandler = require("./src/handlers/video");
 const BankHandler = require("./src/handlers/bank");
 const AdminHandler = require("./src/handlers/admin");
 const WithdrawalHandler = require("./src/handlers/withdrawal");
+const NotificationHandler = require("./src/handlers/notification");
 const path = require("path");
 
 const app = express();
@@ -52,6 +53,7 @@ app.use("/video", VideoHandler);
 app.use("/admin", AdminHandler);
 app.use("/bank", BankHandler);
 app.use("/withdrawal-request", WithdrawalHandler);
+app.use("/notification", NotificationHandler);
 
 //error handler
 // app.use((err, req, res, next) => {

@@ -152,6 +152,68 @@ Router.post(
   }
 );
 
+/**
+ * get user income
+ */
+Router.get("/users/income", auth ,async (req, res) => {
+
+  const admin = await User.findById(req.user.id);
+
+  if (admin.userType !== "0") {
+    return res
+      .status(401)
+      .send({ msg: "You are not authorized to make this action." });
+  }
+
+  const tempArray = [];
+
+  try {
+    const users = await User.find().select("userreference email name");
+
+    for (let j = 0; j < users.length; j++) {
+      const activeUsers = await User.find({
+        introducerreference: users[j].userreference,
+      });
+
+      var passiveUsers = [];
+
+      for (let i = 0; i < activeUsers.length; i++) {
+        let tempUsers = await User.find({
+          introducerreference: activeUsers[i].userreference,
+        });
+        passiveUsers = passiveUsers.concat(tempUsers);
+      }
+
+      const activeUsersVar = activeUsers.map((person) => ({
+        commission: person?.products?.includes("2") ? "1600" : "3000",
+      }));
+
+      activeIncomeVarVar = activeUsersVar.reduce(
+        (previousValue, currentValue) => previousValue + parseInt(currentValue.commission, 10),
+        0
+      );
+
+      const passiveUsersVar = passiveUsers.map((person) => ({
+        commission: person?.products?.includes("2") ? "150" : "500",
+      }));
+
+      passiveIncomeVarVar = passiveUsersVar.reduce(
+        (previousValue, currentValue) => previousValue + parseInt(currentValue.commission, 10),
+        0
+      );
+
+
+      tempArray.push({ user: users[j], totalIncome: passiveIncomeVarVar + activeIncomeVarVar })
+    }
+
+    return res
+      .status(200)
+      .send(tempArray);
+  } catch (err) {
+    console.log(err.message);
+    res.status(500).send("server error");
+  }
+});
 
 /**
  * get user income
