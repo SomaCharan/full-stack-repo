@@ -250,12 +250,12 @@ export default function DashboardSidebar() {
                 </Link>
               </li>
             )}
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/leaderboard" className="nav-link">
                 <i className="icon-user-tie" />
                 <span>Leaderboard</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to="/payments" className="nav-link">
                 <i className="icon-coin-dollar" />
