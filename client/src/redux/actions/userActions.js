@@ -156,3 +156,14 @@ export const getAllDetailsOfUser = (userId) => async () => {
   return res;
 };
 
+/**
+ * get income of current user
+ */
+export const getLeaderboardDetails = () => async () => {
+
+  const res = await axios.get(
+    ApiRoute.getLeaderboardDetails,
+  );
+
+  return res;
+};

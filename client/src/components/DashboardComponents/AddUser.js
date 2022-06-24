@@ -28,6 +28,11 @@ export default function AddUser() {
     { label: 'User', value: '2' },
   ];
 
+  const statusOptions = [
+    { label: 'Active', value: true },
+    { label: 'Inactive', value: false },
+  ];
+
   const handleOnSubmit = async (values) => {
     setGlobalLoader(true)
     dispatch(addUser(values));
@@ -42,6 +47,7 @@ export default function AddUser() {
         phone: '',
         email: '',
         password: '',
+        isActive: true,
         userType: '2',
       }}
       onSubmit={handleOnSubmit}
@@ -52,6 +58,7 @@ export default function AddUser() {
         email: yup.string().required('This field is required.'),
         password: yup.string().required('This field is required.'),
         userType: yup.string().required('This field is required.'),
+        isActive: yup.bool().required('This field is required.'),
       })}
     >
       {(props) => {
@@ -187,6 +194,24 @@ export default function AddUser() {
                               </label>
                             </div>
                             <div className="form-group">
+                              <label className="d-block">
+                                Status:
+                                <Select
+                                  placeholder="User Status"
+                                  options={statusOptions}
+                                  value={statusOptions.filter(d => d.value === values.isActive)}
+                                  onChange={(e) =>
+                                    setFieldValue('isActive', e.value)
+                                  }
+                                />
+                                <ErrorMessage
+                                  name="isActive"
+                                  component="div"
+                                  className="text-danger"
+                                />
+                              </label>
+                            </div>
+                            <div className="form-group">
                               <label>Address</label>
                               <input
                                 type="text"
@@ -212,7 +237,7 @@ export default function AddUser() {
                                       )
                                     }
                                   />{" "}
-                                  <br/>
+                                  <br />
                                   <div className="form-group">
                                     <label>7 Days Income</label>
                                     <input

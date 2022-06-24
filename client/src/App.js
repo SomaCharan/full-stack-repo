@@ -18,7 +18,8 @@ import IncomeDashboard from './components/DashboardComponents/IncomeDashboard';
 import AddBankInformation from './components/DashboardComponents/AddBankInformation';
 import AddUser from './components/DashboardComponents/AddUser';
 import Users from './components/DashboardComponents/Users';
-// import UsersIncomeTable from './components/DashboardComponents/UsersIncomeTable';
+import LeaderBoard from './components/DashboardComponents/LeaderBoard';
+import UsersIncomeTable from './components/DashboardComponents/UsersIncomeTable';
 import AddNotification from './components/DashboardComponents/AddNotification';
 import Notifications from './components/DashboardComponents/Notifications';
 import AllVideos from './components/DashboardComponents/AllVideos';
@@ -116,12 +117,13 @@ function App() {
           <Route path="/payments" exact element={<Payments />} />
           <Route path="/withdrawal-requests" exact element={<WithdrawalRequests />} />
           <Route path="/income-dashboard/:userId/" exact element={<IncomeDashboard />} />
+          <Route path="/leaderboard" exact element={<LeaderBoard />} />
           <Route
             path="/dashboard/affiliate-dashboard"
             exact
             element={<AffiliateDashboard />}
           />
-          {/* <Route path="/users-income-table" exact element={<UsersIncomeTable />} /> */}
+          <Route path="/users-income-table" exact element={<UsersIncomeTable />} />
           <Route path="/add-notifications" exact element={<AddNotification />} />
           <Route path="/notifications" exact element={<Notifications />} />
           <Route path="/add-video" exact element={<AddVideo />} />

@@ -16,6 +16,7 @@ export default function SignupForm(
         email: '',
         password: '',
         confirmPassword: '',
+        isActive: false,
         orderDetails,
         introducerreference,
       }}

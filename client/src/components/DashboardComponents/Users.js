@@ -54,6 +54,7 @@ export default function Users() {
     { title: 'Phone', field: 'phone', filtering: false },
     { title: 'Product', field: 'product', filtering: false },
     { title: 'Role', field: 'role', filtering: false },
+    { title: 'Status', field: 'status', filtering: false },
     { title: 'User Id', field: 'userId', filtering: false },
     { title: 'Created On', field: 'createdOn', filtering: false },
     {
@@ -118,6 +119,7 @@ export default function Users() {
         const data = res.data.map((d) => ({
           ...d,
           userId: d?.userreference,
+          status: d?.isActive === undefined ? 'Active' : d.isActive === true ? 'Active' : 'Inactive',
           createdOn: format(new Date(d?.createdAt), 'MMM dd, yyyy'),
           product: checkProducts(d.products),
           role:
@@ -130,7 +132,6 @@ export default function Users() {
         setUsers(data);
         setGlobalLoader(false);
       }
-
       return;
     } catch (error) {
       console.log(error);

@@ -3372,3 +3372,14 @@ ul {
   width: 50vw !important;
   height: 70vh !important;
 }
+
+
+#qrscanner{
+  width : 50%
+}
+
+@media (max-width: 600px) {
+  #qrscanner{
+    width : 100%
+  }
+}

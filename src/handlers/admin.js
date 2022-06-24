@@ -155,7 +155,7 @@ Router.post(
 /**
  * get user income
  */
-Router.get("/users/income", auth ,async (req, res) => {
+Router.get("/users/income", auth, async (req, res) => {
 
   const admin = await User.findById(req.user.id);
 
@@ -170,12 +170,15 @@ Router.get("/users/income", auth ,async (req, res) => {
   try {
     const users = await User.find().select("userreference email name");
 
+    let activeUsers;
     for (let j = 0; j < users.length; j++) {
-      const activeUsers = await User.find({
+      activeUsers = await User.find({
         introducerreference: users[j].userreference,
       });
 
-      var passiveUsers = [];
+      activeUsers = activeUsers.filter(user => user.isActive !== false);
+
+      let passiveUsers = [];
 
       for (let i = 0; i < activeUsers.length; i++) {
         let tempUsers = await User.find({
@@ -183,6 +186,8 @@ Router.get("/users/income", auth ,async (req, res) => {
         });
         passiveUsers = passiveUsers.concat(tempUsers);
       }
+
+      passiveUsers = passiveUsers.filter(user => user.isActive !== false);
 
       const activeUsersVar = activeUsers.map((person) => ({
         commission: person?.products?.includes("2") ? "1600" : "3000",
@@ -202,7 +207,6 @@ Router.get("/users/income", auth ,async (req, res) => {
         0
       );
 
-
       tempArray.push({ user: users[j], totalIncome: passiveIncomeVarVar + activeIncomeVarVar })
     }
 
@@ -216,7 +220,7 @@ Router.get("/users/income", auth ,async (req, res) => {
 });
 
 /**
- * get user income
+ * get user all details
  */
 Router.get("/user/:userId/all-details", auth, async (req, res) => {
 
@@ -238,11 +242,12 @@ Router.get("/user/:userId/all-details", auth, async (req, res) => {
     const bank = await Bank.findOne({ userreference: req.params.userId });
     const withdrawalRequests = await WithdrawalRequest.find({ userreference: req.params.userId });
 
-    const activeUsers = await User.find({
+    let activeUsers = await User.find({
       introducerreference: user.userreference,
     });
+    activeUsers = activeUsers.filter(user => user.isActive !== false);
 
-    var passiveUsers = [];
+    let passiveUsers = [];
 
     for (let i = 0; i < activeUsers.length; i++) {
       let tempUsers = await User.find({
@@ -250,6 +255,7 @@ Router.get("/user/:userId/all-details", auth, async (req, res) => {
       });
       passiveUsers = passiveUsers.concat(tempUsers);
     }
+    passiveUsers = passiveUsers.filter(user => user.isActive !== false);
 
     const activeUsersVar = activeUsers.map((person) => ({
       ...person._doc,

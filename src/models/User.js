@@ -68,6 +68,11 @@ const UserSchema = new mongoose.Schema({
     default: 0,
   },
   //   always dummy data
+  LeaderBoardIncome: {
+    type: Number,
+    default: 0,
+  },
+  //   always dummy data
   students: {
     type: Number,
     default: 0,
@@ -88,6 +93,11 @@ const UserSchema = new mongoose.Schema({
   },
 
   products: [{ type: String }],
+
+  // By default true, because there are users registered before we introduced this flag
+  isActive: {
+    type: Boolean,
+  },
 
   createdAt: { type: Date, default: Date.now },
   updatedAt: { type: Date, default: Date.now },

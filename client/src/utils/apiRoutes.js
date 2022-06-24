@@ -12,6 +12,7 @@ const API_ROUTES = {
   editUserSelf: '/user',
   editUserImage: '/user/image/{uuid}',
   getIncome: '/user/income',
+  getLeaderboardDetails : '/user/leaderboard',
 
   // withdrawal Requests
   getWithDrawalRequests : '/withdrawal-request',

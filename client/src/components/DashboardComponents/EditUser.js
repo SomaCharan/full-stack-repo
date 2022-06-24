@@ -25,6 +25,11 @@ export default function EditUser() {
     { label: 'User', value: '2' },
   ];
 
+  const statusOptions = [
+    { label: 'Active', value: true },
+    { label: 'Inactive', value: false },
+  ];
+
   const productOptions = [
     { label: 'Success Kit', value: '1' },
     { label: 'Mini Success Kit', value: '2' },
@@ -77,6 +82,8 @@ export default function EditUser() {
         thirtyDaysIncome: user.thirtyDaysIncome ?? 0,
         students: user.students ?? 0,
         activeIncome: user.activeIncome ?? 0,
+        LeaderBoardIncome: user.LeaderBoardIncome ?? 0,
+        isActive: user.isActive ?? true,
         userType: user.userType,
         products: user.products ? productOptions.filter(d => user.products.includes(d.value)) : [],
       }}
@@ -89,6 +96,8 @@ export default function EditUser() {
         thirtyDaysIncome: yup.string().required('This field is required.'),
         activeIncome: yup.string().required('This field is required.'),
         userType: yup.string().required('This field is required.'),
+        LeaderBoardIncome: yup.string().required('This field is required.'),
+        isActive: yup.bool().required('This field is required.'),
         // products: yup
         //   .array()
         //   .min(1, 'This field is required.')
@@ -203,7 +212,7 @@ export default function EditUser() {
                                 component="div"
                                 className="text-danger"
                               />
-                            </div>{' '}
+                            </div>
                             <div className="form-group">
                               <label>30 Days Income:</label>
                               <input
@@ -222,7 +231,26 @@ export default function EditUser() {
                                 component="div"
                                 className="text-danger"
                               />
-                            </div>{' '}
+                            </div>
+                            <div className="form-group">
+                              <label>Leader Board Income:</label>
+                              <input
+                                type="text"
+                                className="form-control"
+                                value={values.LeaderBoardIncome}
+                                onChange={(e) =>
+                                  setFieldValue(
+                                    'LeaderBoardIncome',
+                                    e.target.value
+                                  )
+                                }
+                              />
+                              <ErrorMessage
+                                name="LeaderBoardIncome"
+                                component="div"
+                                className="text-danger"
+                              />
+                            </div>
                             <div className="form-group">
                               <label>Students:</label>
                               <input
@@ -274,6 +302,26 @@ export default function EditUser() {
                                 />
                                 <ErrorMessage
                                   name="userType"
+                                  component="div"
+                                  className="text-danger"
+                                />
+                              </label>
+                            </div>
+                            <div className="form-group">
+                              <label className="d-block">
+                                Status:
+                                <Select
+                                  placeholder="User Type"
+                                  options={statusOptions}
+                                  value={statusOptions.filter(
+                                    (d) => d.value === values.isActive
+                                  )}
+                                  onChange={(e) =>
+                                    setFieldValue('isActive', e.value)
+                                  }
+                                />
+                                <ErrorMessage
+                                  name="isActive"
                                   component="div"
                                   className="text-danger"
                                 />

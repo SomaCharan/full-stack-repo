@@ -50,6 +50,10 @@ Router.post(
         return res.status(400).json({ error: [{ msg: "Wrong Password" }] });
       }
 
+      if (user.isActive === false) {
+        return res.status(401).json({ error: [{ msg: "Your Account is not active. Please contact admin if you have paid already." }] });
+      }
+
       const payload = {
         user: {
           id: user.id,
@@ -68,8 +72,9 @@ Router.post(
         students: user.students,
         sevenDaysIncome: user.sevenDaysIncome,
         todayIncome: user.todayIncome,
-        thirtyDaysIncome : user.thirtyDaysIncome,
-        products : user.products,
+        thirtyDaysIncome: user.thirtyDaysIncome,
+        products: user.products,
+        isActive: user.isActive,
       };
 
       jwt.sign(

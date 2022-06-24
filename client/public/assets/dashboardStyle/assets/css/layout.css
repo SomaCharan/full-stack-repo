@@ -1169,3 +1169,12 @@ background: linear-gradient(to right, #003399 0%, #0066ff 100%);
       width: inherit
     }
   }
+
+  .leader-board-card{
+    background: linear-gradient(to right, #003399 0%, #0066ff 100%)
+  }
+
+  .leaderboardImage{
+    width:65vw !important;
+    height:30vh !important
+  }
