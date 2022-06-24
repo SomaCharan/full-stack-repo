@@ -13,7 +13,7 @@ export default function PaymentPopup(setOpenModal, productPrice) {
       </div>
       <p>Gpay / Phonepe / Paytm :- 9182935177 </p>
       <p>
-        Please whatsapp a screenshot of payment to 9182935177 to activate your account or <br /> click <a style={{color : 'blue'}} href="https://wa.me/9182935177" target="_blank" rel="noreferrer">here</a> to whatsapp directly.
+        Please whatsapp a screenshot of payment to 9182935177 to activate your account or <br /> click <a style={{color : 'blue'}} href="https://wa.me/919182935177" target="_blank" rel="noreferrer">here</a> to whatsapp directly.
       </p>
 
       <div className="nav-right-part  button-new-css-design  w-100 ">
