@@ -4,7 +4,6 @@ import * as yup from 'yup';
 
 export default function SignupForm(
   handleOnSubmit,
-  orderDetails,
   introducerreference,
 ) {
   return (
@@ -17,7 +16,6 @@ export default function SignupForm(
         password: '',
         confirmPassword: '',
         isActive: false,
-        orderDetails,
         introducerreference,
       }}
       onSubmit={handleOnSubmit}
